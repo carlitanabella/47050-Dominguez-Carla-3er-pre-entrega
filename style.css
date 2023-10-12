@@ -88,3 +88,96 @@ button {
     .div13 { grid-area: 3 / 4 / 4 / 5; }
     .div14 { grid-area: 2 / 5 / 3 / 6; }
     .div15 { grid-area: 3 / 5 / 4 / 6; }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+    body {
+        background-color: #C95AB4;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+    }
+    section {
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    ul{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        margin: 5px;
+    }
+    li {
+        display: flex; 
+         height: 100px;
+        width: 100px;
+
+    }
+    #caramelo {
+        background-image: url(./img/caramelo.png);
+        background-size: contain;
+        width: 100px;
+        height: 100px;
+    }
+    #bomba {
+        background-image: url(./img/bomba.png);
+        background-size: contain;
+    }
+    .card {
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+        border-radius: 5px;
+        transition: transform 500ms;
+        transform-style: preserve-3d;
+
+    }
+    .container:active .card:active {
+        transform: rotateY(180deg);
+    }
+    .frontcard,
+    .caramelo,
+    .bomba {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+
+    
+    .frontcard {
+        background-image: url(./img/frontcard.jpg);
+        background-size: contain;
+
+
+    }
+    .caramelo {
+        background-image: url(./img/caramelo.png);
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transform: rotateY(180deg);
+
+    }
+    .bomba  {
+        background-image: url(./img/bomba.png);
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transform: rotateY(180deg);
+
+    }
+    .img {
+        width: 300px;
+
+    }

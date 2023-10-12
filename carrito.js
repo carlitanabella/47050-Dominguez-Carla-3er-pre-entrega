@@ -15,10 +15,10 @@ class Producto {
       this.categoria = categoria;
       this.imagen = imagen;
     }
-  }
+}
   
 
-  class BaseDeDatos {
+class BaseDeDatos {
     constructor() {
    
       this.productos = [];
@@ -51,10 +51,10 @@ class Producto {
         producto.nombre.toLowerCase().includes(palabra.toLowerCase())
       );
     }
-  }
+}
   
 
-  class Carrito {
+class Carrito {
     constructor() {
 
       const carritoStorage = JSON.parse(localStorage.getItem("carrito"));
@@ -140,26 +140,26 @@ class Producto {
       spanCantidadProductos.innerText = this.cantidadProductos;
       spanTotalCarrito.innerText = this.total;
     }
-  }
+}
   
 
-  const bd = new BaseDeDatos();
+const bd = new BaseDeDatos();
   
 
-  const spanCantidadProductos = document.querySelector("#cantidadProductos");
-  const spanTotalCarrito = document.querySelector("#totalCarrito");
-  const divProductos = document.querySelector("#productos");
-  const divCarrito = document.querySelector("#carrito");
-  const inputBuscar = document.querySelector("#inputBuscar");
-  const botonCarrito = document.querySelector("section h1");
+const spanCantidadProductos = document.querySelector("#cantidadProductos");
+const spanTotalCarrito = document.querySelector("#totalCarrito");
+const divProductos = document.querySelector("#productos");
+const divCarrito = document.querySelector("#carrito");
+const inputBuscar = document.querySelector("#inputBuscar");
+const botonCarrito = document.querySelector("section h1");
   
 
-  const carrito = new Carrito();
+const carrito = new Carrito();
  
-  cargarProductos(bd.traerRegistros());
+cargarProductos(bd.traerRegistros());
   
 
-  function cargarProductos(productos) {
+function cargarProductos(productos) {
   
     divProductos.innerHTML = "";
 
@@ -192,15 +192,15 @@ class Producto {
         carrito.agregar(producto);
       });
     }
-  }
+}
   
 
-  inputBuscar.addEventListener("input", (event) => {
+inputBuscar.addEventListener("input", (event) => {
     event.preventDefault();
     const palabra = inputBuscar.value;
     const productos = bd.registrosPorNombre(palabra);
     cargarProductos(productos);
-  });
+});
   
 
   botonCarrito.addEventListener("click", (event) => {
